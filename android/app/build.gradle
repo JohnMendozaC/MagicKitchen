@@ -8,6 +8,16 @@ plugins {
 }
 
 android {
+
+    signingConfigs {
+        release {
+            storeFile file('../magic-kitchen-key.jks')
+            storePassword pass
+            keyAlias alias
+            keyPassword pass
+        }
+    }
+
     compileSdk 31
 
     defaultConfig {
@@ -21,11 +31,30 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
+            applicationIdSuffix ".app.android.dev"
+            debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        release {
+            applicationIdSuffix ".app"
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
     }
+
+    flavorDimensions "default"
+    productFlavors {
+        magickitchen {
+            resValue 'string', 'google_map', GoogleMap
+            buildConfigField 'String', 'BASE_URL', baseUrl
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -35,6 +64,10 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig = true
+    }
+    lintOptions {
+        checkReleaseBuilds false
     }
 }
 

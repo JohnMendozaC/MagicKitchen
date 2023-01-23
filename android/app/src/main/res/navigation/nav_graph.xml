@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.john.magickitchen.application.view.home.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_FoodRecipeDetailFragment"
+            app:destination="@id/FoodRecipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FoodRecipeDetailFragment"
+        android:name="com.john.magickitchen.application.view.foodRecipeDetail.FoodRecipeDetailFragment"
+        android:label="@string/food_recipe_detail_fragment_label"
+        tools:layout="@layout/fragment_food_recipe_detail">
+
+        <action
+            android:id="@+id/action_FoodRecipeDetailFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_FoodRecipeDetailFragment_to_MapFoodRecipeFragment"
+            app:destination="@id/MapFoodRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MapFoodRecipeFragment"
+        android:name="com.john.magickitchen.application.view.mapFoodRecipe.MapFoodRecipeFragment"
+        android:label="@string/see_origin_to_recipe">
+        <action
+            android:id="@+id/action_MapFoodRecipeFragment_to_FoodRecipeDetailFragment"
+            app:destination="@id/FoodRecipeDetailFragment" />
+    </fragment>
+</navigation>

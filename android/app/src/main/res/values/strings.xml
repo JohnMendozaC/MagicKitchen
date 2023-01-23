@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MagicKitchen</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">Magic Kitchen</string>
+    <string name="food_recipe_detail_fragment_label">Detalle del plato</string>
+    <string name="see_origin_to_recipe">Origen del plato</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="not_found_data_of_food_recipes">Not found data of food recipes</string>
+    <string name="search_food_recipe">Search food recipe</string>
+    <string name="item_food">item food</string>
+    <string name="see_location_of_recipe">Ver origen de la receta</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="description">Descripción</string>
+</resources>

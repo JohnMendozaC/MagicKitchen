@@ -20,34 +20,34 @@ Patrones de comportamiento nos indica como es la comunicación entre objetos
 ## Librerias externas
 
 Para la injección de dependencias:    
- implementation "com.google.dagger:hilt-android:2.41"
- implementation 'androidx.test:runner:1.4.0'
+ - implementation "com.google.dagger:hilt-android:2.41"
+ - implementation 'androidx.test:runner:1.4.0'
 
 Para los componentes visuales:
- implementation 'androidx.appcompat:appcompat:1.3.0'
- implementation 'com.google.android.material:material:1.4.0'
- implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
- implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
- implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
- implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
- implementation 'androidx.core:core-splashscreen:1.0.0'
+ - implementation 'androidx.appcompat:appcompat:1.3.0'
+ - implementation 'com.google.android.material:material:1.4.0'
+ - implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+ - implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+ - implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+ - implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+ - implementation 'androidx.core:core-splashscreen:1.0.0'
 
 Para la carga de imagenes en la aplicación:    
- implementation "com.github.bumptech.glide:glide:4.11.0"
+ - implementation "com.github.bumptech.glide:glide:4.11.0"
 
 Para el consumo de servicio se hace uso de las librerias:
- implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
- implementation "com.squareup.retrofit2:converter-gson:2.9.0"
- implementation "com.squareup.retrofit2:retrofit:2.9.0"
+ - implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
+ - implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+ - implementation "com.squareup.retrofit2:retrofit:2.9.0"
 
 Para el uso del sdk de google maps:
- implementation 'com.google.android.gms:play-services-maps:18.0.2'
- implementation 'com.google.maps.android:android-maps-utils:2.2.0'
+ - implementation 'com.google.android.gms:play-services-maps:18.0.2'
+ - implementation 'com.google.maps.android:android-maps-utils:2.2.0'
 
 ## Otros
 
 Para detectar fugas de memoria en la aplicación
- debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
+ - debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
 
 ## Solución de arquitectura
 
@@ -70,12 +70,12 @@ Se utilizan nombres que idenfican las funcionalidades de las clases, metodos que
 Para la pruebas automatizadas se hace uso del patron When Given Then, que permite separar la prueba en tres partes donde cuando ocurra un evento dada ciertas condiciones entonces deberia ocurrir cierta respuesta, también gracias al lenguaje Kotlin se facilita el nombrado de las funciones en un lenguaje mas natural y asi de esa manera tener una fuente de la verdad y que las pruebas automatizadas sean la documentación del codigo.
 
 Para las pruebas automatizadas se hace uso de las siguientes dependencias:
- testImplementation 'io.kotest:kotest-assertions-core:4.6.3'
- testImplementation "io.mockk:mockk:1.12.0"
- testImplementation "io.mockk:mockk-android:1.12.0"
- testImplementation 'androidx.test.ext:junit:1.1.3'
- testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2"
- testImplementation "androidx.arch.core:core-testing:2.1.0"
+ - testImplementation 'io.kotest:kotest-assertions-core:4.6.3'
+ - testImplementation "io.mockk:mockk:1.12.0"
+ - testImplementation "io.mockk:mockk-android:1.12.0"
+ - testImplementation 'androidx.test.ext:junit:1.1.3'
+ - testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2"
+ - testImplementation "androidx.arch.core:core-testing:2.1.0"
 
 
 ## Novedades de la plataforma
